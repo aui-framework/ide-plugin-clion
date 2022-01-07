@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.alex2772.auiclionplugin.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.alex2772.auiclionplugin.MyBundle
 
 class MyApplicationService {
 
