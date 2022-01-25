@@ -1,4 +1,4 @@
-package com.github.alex2772.auiclionplugin
+package com.github.aui.clion
 
 import com.intellij.ide.highlighter.XmlFileType
 import com.intellij.psi.xml.XmlFile

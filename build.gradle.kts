@@ -57,11 +57,31 @@ tasks {
         }
         withType<KotlinCompile> {
             kotlinOptions.jvmTarget = it
+            kotlinOptions.freeCompilerArgs = listOf("-Xjvm-default=all")
         }
     }
 
-    wrapper {
-        gradleVersion = properties("gradleVersion")
+    task<Exec>("cmakeConfigure") {
+        commandLine(
+            "cmake",
+            "-S", "src/main/cpp",
+            "-B", "$buildDir/cmake",
+            "-DCMAKE_INSTALL_PREFIX=build/cmake/output",
+            "-DJDK_DIR=${System.getProperties().getProperty("java.home")!!}")
+    }
+    task<Exec>("cmakeBuild") {
+        dependsOn("cmakeConfigure")
+        commandLine("cmake", "--build", "$buildDir/cmake")
+    }
+    task<Exec>("cmakeInstall") {
+        dependsOn("cmakeBuild")
+        commandLine("cmake", "--build", "$buildDir/cmake", "-t", "install")
+    }
+
+    task<Copy>("copyNativesToResources") {
+        dependsOn("cmakeInstall")
+        from("$buildDir/cmake/output/aui_clion/bin")
+        into("src/main/resources/NATIVES")
     }
 
     patchPluginXml {
@@ -90,6 +110,10 @@ tasks {
         })
     }
 
+    runIde {
+        dependsOn("copyNativesToResources")
+    }
+
     // Configure UI tests plugin
     // Read more: https://github.com/JetBrains/intellij-ui-test-robot
     runIdeForUiTests {
@@ -113,4 +137,7 @@ tasks {
         // https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
         channels.set(listOf(properties("pluginVersion").split('-').getOrElse(1) { "default" }.split('.').first()))
     }
+}
+dependencies {
+    //implementation(files("libs/clion.jar")) // reverseds
 }

@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>
+    Reports invalid usages of <code>_rgb</code> and <code>_argb</code>.
+</p>
+<p>
+    Example:
+</p>
+<code>
+    auto blue = 0xff_rgb; // c++ is valid; however it's hard to understand
+</code>
+<p>
+    will be quick-fixed to:
+</p>
+<code>
+    auto blue = 0x0000ff_rgb; // same color and easy to understand
+</code>
+</body>
+</html>

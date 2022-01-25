@@ -1,0 +1,27 @@
+#parse("C File Header.h")
+
+#[[#include <]]#gtest/gtest.h#[[>]]#
+
+/**
+ * Fixture.
+ */
+class ${FILE_NAME}: public testing::Test {
+public:
+    /**
+     * Run once per test case before body.
+     */
+    void SetUp() override {
+        Test::SetUp();
+    }
+
+    /**
+     * Run once per test case after body.
+     */
+    void TearDown() override {
+        Test::TearDown();
+    }
+}
+
+TEST_F(${FILE_NAME}, Case1) {
+    ASSERT_EQ(2 + 2, 4);#[[$END$]]#
+}

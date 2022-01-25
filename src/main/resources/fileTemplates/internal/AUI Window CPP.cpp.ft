@@ -1,0 +1,9 @@
+#parse("C File Header.h")
+#[[#include]]# "${NAME}.h"
+#[[#include]]# <AUI/Util/UIBuildingHelpers.h>
+
+${NAME}::${NAME}(): AWindow("${NAME} Window") {
+    setContents(Centered {
+        _new<ALabel>("Hello!"),
+    });
+}

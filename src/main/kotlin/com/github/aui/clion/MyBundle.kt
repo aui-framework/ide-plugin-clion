@@ -1,11 +1,11 @@
-package com.github.alex2772.auiclionplugin
+package com.github.aui.clion
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
 import org.jetbrains.annotations.PropertyKey
 
 @NonNls
-private const val BUNDLE = "messages.MyBundle"
+private const val BUNDLE = "messages.aui"
 
 object MyBundle : DynamicBundle(BUNDLE) {
 

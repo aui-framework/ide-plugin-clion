@@ -1,0 +1,8 @@
+#parse("C File Header.h")
+#[[#include]]# <AUI/Platform/AWindow.h>
+
+
+class ${NAME}: public AWindow {
+public:
+    ${NAME}();
+};
