@@ -38,8 +38,9 @@ message(STATUS "Using JDK_DIR=${JDK_DIR}")
 
 set(AUI_BRANCH develop)
 
-set(AUI_BOOT_AUI_ADD_SUBDIRECTORY ON)
-set(BUILD_SHARED_LIBS OFF)
+set(AUI_BOOT_AUI_ADD_SUBDIRECTORY ON CACHE BOOL "")
+set(BUILD_SHARED_LIBS OFF CACHE BOOL "")
+
 # Use AUI.Boot
 file(
         DOWNLOAD
@@ -51,14 +52,17 @@ include(${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)
 auib_import(AUI https://github.com/aui-framework/aui
             VERSION ${AUI_BRANCH}
             COMPONENTS core views)
+auib_import(aui.preview https://github.com/Alex2772/AUI.Preview
+            ADD_SUBDIRECTORY)
 
+set_target_properties(aui.preview.library PROPERTIES INTERFACE_AUI_WHOLEARCHIVE TRUE)
 
 # Create the executable. This function automatically links all sources from the src/ folder, creates CMake target and
 # places the resulting executable to bin/ folder.
 aui_module(aui_clion FORCE_SHARED EXPORT aui_clion)
 
 # Link required libs
-target_link_libraries(aui_clion PRIVATE aui::core aui::views JDK::JVM)
+aui_link(aui_clion PRIVATE aui::core aui::views JDK::JVM aui.preview.library)
 
 # naming
 set(OS_ARCH ${CMAKE_SYSTEM_PROCESSOR})

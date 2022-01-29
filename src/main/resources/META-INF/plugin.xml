@@ -15,10 +15,10 @@
         <directoryProjectGenerator implementation="com.github.aui.clion.project.AUIAppDirectoryProjectGenerator"/>
         <directoryProjectGenerator implementation="com.github.aui.clion.project.AUILibraryDirectoryProjectGenerator"/>
 
-        <!--<internalFileTemplate name="AUI Window" />-->
         <internalFileTemplate name="AUI Test Suite"/>
         <internalFileTemplate name="AUI Window CPP" />
         <internalFileTemplate name="AUI Window Header" />
+        <internalFileTemplate name="AUI Stylesheet" />
 
         <localInspection language="ObjectiveC"
                          displayName="Invalid color literal"
@@ -46,9 +46,17 @@
                                    implementationClass="com.github.aui.clion.inlay.AUILetInlayProvider" />
 
         <toolWindow id="AUI" secondary="false" icon="AllIcons.General.Modified" anchor="right"
-                    factoryClass="com.github.aui.clion.toolWindow.AUIPreviewToolWindowFactory"/>
+                    factoryClass="com.github.aui.clion.toolWindow.AUIPreviewToolWindowFactory" />
         <additionalTextAttributes scheme="Default" file="com/github/aui/clion/colors/AUIDefault.xml"/>
         <additionalTextAttributes scheme="Darcula" file="com/github/aui/clion/colors/AUIDarcula.xml"/>
+
+        <fileType name="AUI Stylesheet"
+                  language="ObjectiveC"
+                  implementationClass="com.github.aui.clion.fileType.AUIStylesheetFileType"
+                  extensions="ass.cpp"
+                  fieldName="INSTANCE"/>
+
+        <fileTypeOverrider implementation="com.github.aui.clion.fileTypeOverrider.AUIStylesheetFileTypeOverrider" />
     </extensions>
 
     <actions>
@@ -60,13 +68,15 @@
                 class="com.github.aui.clion.fileTemplates.AUITestSuiteTemplate">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
         </action>
+        <action id="AUI.NewAUIStylesheet"
+                class="com.github.aui.clion.fileTemplates.AUIStylesheet">
+            <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
+        </action>
     </actions>
 
     <applicationListeners>
         <listener class="com.github.aui.clion.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
-        <listener class="com.github.aui.clion.listeners.AUIFileStateForCMakeReloadListener"
-                  topic="com.intellij.openapi.vfs.newvfs.BulkFileListener"/>
     </applicationListeners>
 
 </idea-plugin>

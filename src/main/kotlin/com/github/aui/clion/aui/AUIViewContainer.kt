@@ -1,6 +1,7 @@
 package com.github.aui.clion.aui
 
 import com.intellij.ui.scale.JBUIScale
+import com.jetbrains.sourceglider.contextSensitive.input.Bool
 import java.awt.Graphics
 import java.awt.Image
 import java.awt.image.ColorModel
@@ -37,9 +38,9 @@ open class AUIViewContainer: JPanel() {
         }
     }
 
-    external fun nInit()
-    external fun nSetSize(width: Int, height: Int)
-    external fun nRender(scale: Float, mImageBuffer: IntArray?)
+    private external fun nInit()
+    private external fun nSetSize(width: Int, height: Int)
+    private external fun nRender(scale: Float, mImageBuffer: IntArray?): Boolean
 
     init {
         nInit()
@@ -51,15 +52,20 @@ open class AUIViewContainer: JPanel() {
         val scale = JBUIScale.sysScale(this)
         val w = (width * scale).toInt()
         val h = (height * scale).toInt()
+        var updateImage = false
         if (mPrevWidth != w || mPrevHeight != h) {
             nSetSize(w, h)
             mPrevWidth = w
             mPrevHeight = h
             mImageBuffer = IntArray(w * h)
+            updateImage = true
+        }
+        if (nRender(scale, mImageBuffer)) updateImage = true
+        if (updateImage) {
             mImageSource = MemoryImageSource(w, h, ColorModel.getRGBdefault(), mImageBuffer, 0, w);
+            mImageSource.setFullBufferUpdates(true)
             mImage = createImage(mImageSource)
         }
-        nRender(scale, mImageBuffer)
         g!!.drawImage(mImage, 0, 0, width, height, this)
     }
 

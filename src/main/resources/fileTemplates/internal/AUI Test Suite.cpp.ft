@@ -20,7 +20,7 @@ public:
     void TearDown() override {
         Test::TearDown();
     }
-}
+};
 
 TEST_F(${FILE_NAME}, Case1) {
     ASSERT_EQ(2 + 2, 4);#[[$END$]]#
