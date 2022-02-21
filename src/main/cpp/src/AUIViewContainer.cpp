@@ -45,6 +45,7 @@ CALLED_FROM_JAVA(void) Java_com_github_aui_clion_aui_AUIViewContainer_nSetSize(J
     AUIViewContainer::byObject(env, obj)->setViewportSize(width, height);
 }
 CALLED_FROM_JAVA(jboolean) Java_com_github_aui_clion_aui_AUIViewContainer_nRender(JNIEnv* env, jobject obj, jfloat uiScale, jintArray buffer) {
+    cjg::env() = env;
     ALogger::info("nRender");
     auto auiViewContainer = reinterpret_cast<AUIViewContainer*>(env->GetLongField(obj, _gJAUIViewContainer.mNativePtr));
     auiViewContainer->getWindow()->getThread()->processMessages();
