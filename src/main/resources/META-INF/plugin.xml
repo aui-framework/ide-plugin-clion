@@ -9,6 +9,8 @@
     <depends>com.intellij.clion</depends>
     <depends>com.intellij.cidr.lang</depends>
 
+    <resource-bundle>messages.MyBundle</resource-bundle>
+
     <extensions defaultExtensionNs="com.intellij">
         <projectService serviceImplementation="com.github.aui.clion.services.AUIProjectService"/>
 
