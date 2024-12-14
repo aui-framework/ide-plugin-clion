@@ -153,10 +153,7 @@ AUI_ENTRY {
 
         // write -DAUIB_AUI_AS=TRUE
         if (settings.panel.auiSubProject.isSelected) {
-
-            cmake.settings.apply {
-                setProfiles(listOf(activeProfiles.first().withGenerationOptions("-DAUIB_AUI_AS=TRUE")))
-            }
+            cmake.settings.profiles = cmake.settings.profiles.map { it.withGenerationOptions("-DAUIB_AUI_AS=TRUE") }
         }
 
         cmake.selectProjectDir(VfsUtilCore.virtualToIoFile(baseDir))                               // load CMake project

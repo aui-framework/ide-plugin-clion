@@ -48,7 +48,7 @@ dependencies {
         instrumentationTools()
         pluginVerifier()
         zipSigner()
-//        testFramework(TestFrameworkType.Platform)
+        testFramework(TestFrameworkType.Platform, "243.22562.186")
     }
 }
 
@@ -104,7 +104,6 @@ intellijPlatform {
     }
 
     pluginVerification {
-        freeArgs = providers.gradleProperty("pluginVerifierArgs").map { it.split(' ') }
         ides {
             recommended()
         }

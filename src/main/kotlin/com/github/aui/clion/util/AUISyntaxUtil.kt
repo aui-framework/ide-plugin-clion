@@ -1,11 +1,6 @@
 package com.github.aui.clion.util
 
-import com.intellij.openapi.util.Ref
-import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.psi.PsiFile
 import com.jetbrains.cidr.lang.types.OCType
-import com.jetbrains.sourceglider.contextSensitive.input.Bool
-import java.lang.IllegalStateException
 
 class AUISyntaxUtil {
     companion object {

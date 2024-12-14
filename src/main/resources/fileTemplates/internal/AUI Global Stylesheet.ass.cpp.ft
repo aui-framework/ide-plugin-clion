@@ -8,11 +8,10 @@ using namespace ass;
 struct MyStyle {
     MyStyle() {
         AStylesheet::global().addRules({
-            /*
             {
                 t<AButton>(),
                 BackgroundSolid { 0xff0000_rgb },
-            }, */
+            },
         });
     }
 } myStyleInst;

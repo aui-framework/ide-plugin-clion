@@ -1,11 +1,9 @@
 package com.github.aui.clion.aui
 
 import com.intellij.ui.scale.JBUIScale
-import com.jetbrains.sourceglider.contextSensitive.input.Bool
 import java.awt.Graphics
 import java.awt.Image
 import java.awt.image.ColorModel
-import java.awt.image.DirectColorModel
 import java.awt.image.MemoryImageSource
 import java.io.FileOutputStream
 import java.io.IOException
