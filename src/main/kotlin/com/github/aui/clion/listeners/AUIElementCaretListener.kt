@@ -160,7 +160,7 @@ class AUIElementCaretListener(private val mProject: Project) : CaretListener, Di
                         editor.markupModel.removeHighlighter(rangeHighlighter)
                     }
 
-                    AUIPreviewToolWindow.of(mProject)?.updateLayoutCode(rootElement.text!!)
+                    AUIPreviewToolWindow.of(mProject)?.updateLayoutCode(rootElement.text)
 
                     val highlight = editor.markupModel.addRangeHighlighterAndChangeAttributes(
                         MATCHED_UI_ELEMENT,

@@ -20,7 +20,7 @@
         <internalFileTemplate name="AUI Test Suite"/>
         <internalFileTemplate name="AUI Window CPP" />
         <internalFileTemplate name="AUI Window Header" />
-        <internalFileTemplate name="AUI Stylesheet" />
+        <internalFileTemplate name="AUI Global Stylesheet" />
 
         <localInspection language="ObjectiveC"
                          displayName="Invalid color literal"
@@ -47,12 +47,12 @@
         <codeInsight.inlayProvider language="ObjectiveC"
                                    implementationClass="com.github.aui.clion.inlay.AUILetInlayProvider" />
 
-        <toolWindow id="AUI" secondary="false" icon="AllIcons.General.Modified" anchor="right"
-                    factoryClass="com.github.aui.clion.toolWindow.AUIPreviewToolWindowFactory" />
+<!--        <toolWindow id="AUI" secondary="false" icon="AllIcons.General.Modified" anchor="right"-->
+<!--                    factoryClass="com.github.aui.clion.toolWindow.AUIPreviewToolWindowFactory" />-->
         <additionalTextAttributes scheme="Default" file="com/github/aui/clion/colors/AUIDefault.xml"/>
         <additionalTextAttributes scheme="Darcula" file="com/github/aui/clion/colors/AUIDarcula.xml"/>
 
-        <fileType name="AUI Stylesheet"
+        <fileType name="AUI Global Stylesheet"
                   language="ObjectiveC"
                   implementationClass="com.github.aui.clion.fileType.AUIStylesheetFileType"
                   extensions="ass.cpp"

@@ -4,6 +4,7 @@ package com.github.aui.clion.project
 
 import com.github.aui.clion.ConfigurationData
 import com.intellij.ui.components.JBCheckBox
+import com.intellij.ui.components.JBTextField
 import com.intellij.ui.dsl.builder.*
 import com.jetbrains.cidr.ui.itemValue
 
@@ -16,13 +17,12 @@ class AUINewProjectPanel {
             AUIModule("views", "UI toolkit", true),
             AUIModule("crypt", "encryption/decryption"),
             AUIModule("curl", "http(s) requests"),
-            AUIModule("data", "ORM"),
             AUIModule("json", "JSON parser"),
             AUIModule("xml", "XML parser"),
         )
     }
 
-
+    val version = JBTextField("master")
     val auiSubProject = JBCheckBox("Include AUI as a subproject")
     val staticBuild = JBCheckBox("Static build")
     val assetsCompilations = JBCheckBox("Assets")
@@ -31,6 +31,9 @@ class AUINewProjectPanel {
 
     fun create(config: ConfigurationData) = panel {
         config.panel = this@AUINewProjectPanel
+        row("AUI version") {
+            cell(version)
+        }
         group("Modules") {
             row {
                 checkBox("aui::core").apply {
@@ -57,11 +60,6 @@ class AUINewProjectPanel {
         }
 
         row {
-            cell(auiSubProject)
-                .comment("for developing the framework itself")
-            comment("(-DAUI_BOOT_AUI_ADD_SUBDIRECTORY=TRUE)")
-        }
-        row {
             cell(staticBuild)
                 .comment("to create a standalone binary")
             comment("(-DBUILD_SHARED_LIBS=FALSE)")
@@ -75,6 +73,12 @@ class AUINewProjectPanel {
             cell(tests)
                 .comment("to perform unit testing")
             comment("(aui_enable_tests())")
+        }
+
+        row {
+            cell(auiSubProject)
+                .comment("to develop AUI")
+            comment("(-DAUIB_AUI_AS=TRUE)")
         }
     }
 }

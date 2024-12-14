@@ -1,17 +1,18 @@
 #parse("C File Header.h")
 
 #[[#include <]]#AUI/ASS/ASS.h#[[>]]#
+#[[#include <]]#AUI/View/AButton.h#[[>]]#
 
 using namespace ass;
 
 struct MyStyle {
     MyStyle() {
-        AStylesheet::inst().addRules({
+        AStylesheet::global().addRules({
             /*
             {
                 t<AButton>(),
                 BackgroundSolid { 0xff0000_rgb },
             }, */
-        })
+        });
     }
 } myStyleInst;

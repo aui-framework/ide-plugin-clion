@@ -10,7 +10,7 @@ class AUIStylesheetFileType: LanguageFileType(OCLanguage.getInstance()) {
     companion object {
         val INSTANCE = AUIStylesheetFileType()
     }
-    override fun getName(): String = "AUI Stylesheet"
+    override fun getName(): String = "AUI Global Stylesheet"
     override fun getDescription(): String = "AUI style description file"
     override fun getDefaultExtension(): String = "ass.cpp"
     override fun getIcon(): Icon = AUIIcons.STYLESHEET

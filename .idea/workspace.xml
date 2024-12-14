@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e86e20bc-572e-4b0d-8ef8-8427e0e23ea1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/cpp/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/template-cleanup/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.github/template-cleanup/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/cpp/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/fileTemplates/AUIStylesheet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/fileTemplates/AUIStylesheet.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/fileType/AUIStylesheetFileType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/fileType/AUIStylesheetFileType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/inlay/AUILetInlayProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/inlay/AUILetInlayProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/listeners/AUIElementCaretListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/listeners/AUIElementCaretListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/project/AUIDirectoryProjectGeneratorBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/project/AUIDirectoryProjectGeneratorBase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/project/AUINewProjectPanel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/project/AUINewProjectPanel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/services/AUIProjectService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/services/AUIProjectService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fileTemplates/internal/AUI Stylesheet.ass.cpp.ft" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fileTemplates/internal/AUI Stylesheet.ass.cpp.ft" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fileTemplates/internal/AUI Stylesheet.ass.cpp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fileTemplates/internal/AUI Stylesheet.ass.cpp.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="aui-clion-plugin" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Alex2772&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Alex2772/aui-clion-plugin&quot;,
+    &quot;accountId&quot;: &quot;7fd24620-30da-4f1b-8572-63413ff17415&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2qAREdSaYo4wfgY47FgBOAJCP3S" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Run Plugin.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/alex2772/IdeaProjects/aui-clion-plugin/.idea",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.idea" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Run Plugin">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e86e20bc-572e-4b0d-8ef8-8427e0e23ea1" name="Changes" comment="" />
+      <created>1734103283043</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734103283043</updated>
+    </task>
+    <servers />
+  </component>
+</project>

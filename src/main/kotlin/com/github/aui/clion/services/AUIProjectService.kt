@@ -20,8 +20,8 @@ class AUIProjectService(private val mProject: Project): Disposable {
     private val mCaretListener = AUIElementCaretListener(mProject)
 
     init {
-        EditorFactory.getInstance().eventMulticaster.addCaretListener(mCaretListener, mCaretListener)
-        EditorFactory.getInstance().eventMulticaster.addDocumentListener(mCaretListener, mCaretListener)
+//        EditorFactory.getInstance().eventMulticaster.addCaretListener(mCaretListener, mCaretListener)
+//        EditorFactory.getInstance().eventMulticaster.addDocumentListener(mCaretListener, mCaretListener)
 
         mProject.messageBus.connect().subscribe(VirtualFileManager.VFS_CHANGES, AUIFileStateForCMakeReloadListener(this))
         mProject.messageBus.connect().subscribe(VirtualFileManager.VFS_CHANGES, AUIStylesheetListener(this))

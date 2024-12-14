@@ -11,6 +11,7 @@ import com.intellij.ide.util.projectWizard.CustomStepProjectGenerator
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.module.Module
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.util.IconLoader
 import com.intellij.openapi.vfs.VfsUtilCore
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.openapi.wm.impl.welcomeScreen.AbstractActionWithPanel
@@ -41,14 +42,22 @@ abstract class AUIDirectoryProjectGeneratorBase : CLionProjectGenerator<Configur
         val projectName = project.name
         ApplicationManager.getApplication().runWriteAction {
             if (settings.panel.assetsCompilations.isSelected) {
-                baseDir.createChildDirectory(this, "assets")
+                AUIIcons::class.java.getResourceAsStream("/icons/logo.svg")?.let {
+                    baseDir.createChildDirectory(this, "assets")
+                        .createChildData(this, "logo.svg")
+                        .setBinaryContent(it.readAllBytes())
+                }
             }
             if (settings.panel.tests.isSelected) {
                 val testSuiteName = "${projectName}Tests".replace("-", "")
                 baseDir.createChildDirectory(this, "tests")
                     .createChildData(this, "${testSuiteName}.cpp")
                     .setBinaryContent("""
-               
+#include <gtest/gtest.h>
+
+TEST(${projectName}, Simple) {
+    EXPECT_EQ(2 + 2, 4);
+}
                     """.trimIndent().toByteArray())
             }
 
@@ -59,16 +68,20 @@ cmake_minimum_required(VERSION 3.16)
 project(${projectName})
 
 ${if (settings.panel.staticBuild.isSelected) "set(BUILD_SHARED_LIBS OFF)\n" else ""}
+
+set(AUI_VERSION ${settings.panel.version.text})
+
 # Use AUI.Boot
 file(
         DOWNLOAD
-        https://raw.githubusercontent.com/aui-framework/aui/master/aui.boot.cmake
+        https://raw.githubusercontent.com/aui-framework/aui/${'$'}{AUI_VERSION}/aui.boot.cmake
         ${'$'}{CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)
 include(${'$'}{CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)
 
 # link AUI
 auib_import(aui https://github.com/aui-framework/aui
-            COMPONENTS ${settings.panel.modules.joinToString(" ")})
+            COMPONENTS ${settings.panel.modules.joinToString(" ")}
+            VERSION ${'$'}{AUI_VERSION})
 
 ${getCMakeTargetDeclaration(projectName)}
 
@@ -87,15 +100,21 @@ ${if (settings.panel.assetsCompilations.isSelected) "aui_compile_assets(${projec
 #include <AUI/Platform/Entry.h>
 #include <AUI/Platform/AWindow.h>
 #include <AUI/Util/UIBuildingHelpers.h>
+${ if (settings.panel.assetsCompilations.isSelected) "#include <AUI/View/ADrawableView.h>" else "" }
+
+using namespace declarative;
 
 class MyWindow: public AWindow {
 public:
     MyWindow(): AWindow("${projectName}", 300_dp, 200_dp)
     {
         setContents(
-            Stacked {
-                _new<ALabel>("Hello world, ${projectName}!")
+          Centered {
+            Vertical {
+               ${ if (settings.panel.assetsCompilations.isSelected) "Icon { \":logo.svg\" } with_style { FixedSize { 64_dp } }," else "" }
+              _new<ALabel>("Hello world, ${projectName}!"),
             }
+          }
         );
     }
 };
@@ -132,11 +151,11 @@ AUI_ENTRY {
         project.setTrusted(true)                                                                   // trust the project
         var cmake = CMakeWorkspace.getInstance(project)
 
-        // write -DAUI_BOOT_AUI_ADD_SUBDIRECTORY=TRUE
+        // write -DAUIB_AUI_AS=TRUE
         if (settings.panel.auiSubProject.isSelected) {
 
             cmake.settings.apply {
-                setProfiles(listOf(activeProfiles.first().withGenerationOptions("-DAUI_BOOT_AUI_ADD_SUBDIRECTORY=TRUE")))
+                setProfiles(listOf(activeProfiles.first().withGenerationOptions("-DAUIB_AUI_AS=TRUE")))
             }
         }
 

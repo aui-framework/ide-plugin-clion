@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: bundledPlugin:Docker:231.8109.174+308" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="bundledPlugin" artifactId="Docker" version="231.8109.174+308" baseVersion="231.8109.174+308" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/8.10.2/transforms/df5cac9e6cc50a7395cd1effed2dab91/transformed/CLion-2023.1/plugins/clouds-docker-impl/lib/clouds-docker-impl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: bundledPlugin:com.intellij.cidr.lang:2023.1+205" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="bundledPlugin" artifactId="com.intellij.cidr.lang" version="2023.1+205" baseVersion="2023.1+205" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/8.10.2/transforms/df5cac9e6cc50a7395cd1effed2dab91/transformed/CLion-2023.1/plugins/c-plugin/lib/c-plugin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

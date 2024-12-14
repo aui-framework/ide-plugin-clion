@@ -20,9 +20,9 @@ class AUIStylesheet : CreateFromTemplateAction<PsiFile>(CAPTION, TEXT, AUIIcons.
     DumbAware {
 
     companion object {
-        val CAPTION = "AUI Stylesheet"
-        val TEXT = "Creates new AUI stylesheet."
-        val TEMPLATE = "AUI Stylesheet.ass"
+        val CAPTION = "AUI Global Stylesheet"
+        val TEXT = "Creates new AUI Global Stylesheet."
+        val TEMPLATE = "AUI Global Stylesheet.ass"
     }
 
 

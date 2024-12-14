@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: bundledPlugin:org.jetbrains.plugins.remote-run:231.8109.174+857" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="bundledPlugin" artifactId="org.jetbrains.plugins.remote-run" version="231.8109.174+857" baseVersion="231.8109.174+857" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/8.10.2/transforms/df5cac9e6cc50a7395cd1effed2dab91/transformed/CLion-2023.1/plugins/remoteRun/lib/remoteRun.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
