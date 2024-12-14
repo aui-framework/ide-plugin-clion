@@ -1,8 +1,8 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.aui.ideplugin</id>
-    <name>AUI framework support for CLion</name>
-    <vendor>alex2772</vendor>
+    <name>AUI framework support</name>
+    <vendor>AUI Project</vendor>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
@@ -49,8 +49,8 @@
 
 <!--        <toolWindow id="AUI" secondary="false" icon="AllIcons.General.Modified" anchor="right"-->
 <!--                    factoryClass="com.github.aui.ideplugin.toolWindow.AUIPreviewToolWindowFactory" />-->
-        <additionalTextAttributes scheme="Default" file="com/github/aui/clion/colors/AUIDefault.xml"/>
-        <additionalTextAttributes scheme="Darcula" file="com/github/aui/clion/colors/AUIDarcula.xml"/>
+        <additionalTextAttributes scheme="Default" file="com/github/aui/ideplugin/colors/AUIDefault.xml"/>
+        <additionalTextAttributes scheme="Darcula" file="com/github/aui/ideplugin/colors/AUIDarcula.xml"/>
 
         <fileType name="AUI Global Stylesheet"
                   language="ObjectiveC"
