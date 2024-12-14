@@ -5,23 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e86e20bc-572e-4b0d-8ef8-8427e0e23ea1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/cpp/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/template-cleanup/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.github/template-cleanup/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_Docker_231_8109_174_308.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_com_intellij_cidr_base_231_8109_174_332.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_com_intellij_cidr_lang_2023_1_205.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_com_intellij_clion_2023_1_367.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_com_intellij_copyright_231_8109_174_359.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_com_intellij_css_2023_1_440.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_com_intellij_nativeDebug_231_8109_174_450.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_com_intellij_platform_images_231_8109_174_764.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_com_jetbrains_performancePlugin_231_8109_174_54.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_com_jetbrains_plugins_webDeployment_231_8109_174_101.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_org_jetbrains_plugins_remote_run_231_8109_174_857.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_org_jetbrains_plugins_terminal_231_8109_174_106.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bundledPlugin_org_jetbrains_plugins_yaml_231_8109_174_645.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/aui-clion-plugin.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/aui-clion-plugin.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/fileTemplates/AUIStylesheet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/fileTemplates/AUIStylesheet.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/fileType/AUIStylesheetFileType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/fileType/AUIStylesheetFileType.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/inlay/AUILetInlayProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/inlay/AUILetInlayProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/listeners/AUIElementCaretListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/listeners/AUIElementCaretListener.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/project/AUIDirectoryProjectGeneratorBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/project/AUIDirectoryProjectGeneratorBase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/project/AUINewProjectPanel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/project/AUINewProjectPanel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/services/AUIProjectService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/aui/clion/services/AUIProjectService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fileTemplates/internal/AUI Stylesheet.ass.cpp.ft" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fileTemplates/internal/AUI Stylesheet.ass.cpp.ft" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fileTemplates/internal/AUI Stylesheet.ass.cpp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fileTemplates/internal/AUI Stylesheet.ass.cpp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/aui/clion/MyPluginTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testData/rename/foo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testData/rename/foo_after.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +82,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Run Plugin.executor": "Debug",
+    "Gradle.Run Tests.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -93,7 +96,7 @@
       <recent name="$PROJECT_DIR$/.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Run Plugin">
+  <component name="RunManager" selected="Gradle.Run Tests">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
