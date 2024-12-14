@@ -1,6 +1,6 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.aui.clion</id>
+    <id>com.github.aui.ideplugin</id>
     <name>AUI framework support for CLion</name>
     <vendor>alex2772</vendor>
 
@@ -12,10 +12,10 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <projectService serviceImplementation="com.github.aui.clion.services.AUIProjectService"/>
+        <projectService serviceImplementation="com.github.aui.ideplugin.services.AUIProjectService"/>
 
-        <directoryProjectGenerator implementation="com.github.aui.clion.project.AUIAppDirectoryProjectGenerator"/>
-        <directoryProjectGenerator implementation="com.github.aui.clion.project.AUILibraryDirectoryProjectGenerator"/>
+        <directoryProjectGenerator implementation="com.github.aui.ideplugin.project.AUIAppDirectoryProjectGenerator"/>
+        <directoryProjectGenerator implementation="com.github.aui.ideplugin.project.AUILibraryDirectoryProjectGenerator"/>
 
         <internalFileTemplate name="AUI Test Suite"/>
         <internalFileTemplate name="AUI Window CPP" />
@@ -29,7 +29,7 @@
                          groupKey="group.names.aui"
                          enabledByDefault="true"
                          level="WARNING"
-                         implementationClass="com.github.aui.clion.inspections.colorLiteral.AUIColorLiteralInspection"/>
+                         implementationClass="com.github.aui.ideplugin.inspections.colorLiteral.AUIColorLiteralInspection"/>
 
         <localInspection language="ObjectiveC"
                          displayName="Unexisting asset"
@@ -38,46 +38,46 @@
                          groupKey="group.names.aui"
                          enabledByDefault="true"
                          level="ERROR"
-                         implementationClass="com.github.aui.clion.inspections.assetExistence.AUIAssetExistenceInspection"/>
+                         implementationClass="com.github.aui.ideplugin.inspections.assetExistence.AUIAssetExistenceInspection"/>
 
-        <colorProvider implementation="com.github.aui.clion.gutter.AUIColorProvider"/>
+        <colorProvider implementation="com.github.aui.ideplugin.gutter.AUIColorProvider"/>
 
         <codeInsight.lineMarkerProvider language="ObjectiveC"
-                                        implementationClass="com.github.aui.clion.gutter.AUIAssetGutter" />
+                                        implementationClass="com.github.aui.ideplugin.gutter.AUIAssetGutter" />
         <codeInsight.inlayProvider language="ObjectiveC"
-                                   implementationClass="com.github.aui.clion.inlay.AUILetInlayProvider" />
+                                   implementationClass="com.github.aui.ideplugin.inlay.AUILetInlayProvider" />
 
 <!--        <toolWindow id="AUI" secondary="false" icon="AllIcons.General.Modified" anchor="right"-->
-<!--                    factoryClass="com.github.aui.clion.toolWindow.AUIPreviewToolWindowFactory" />-->
+<!--                    factoryClass="com.github.aui.ideplugin.toolWindow.AUIPreviewToolWindowFactory" />-->
         <additionalTextAttributes scheme="Default" file="com/github/aui/clion/colors/AUIDefault.xml"/>
         <additionalTextAttributes scheme="Darcula" file="com/github/aui/clion/colors/AUIDarcula.xml"/>
 
         <fileType name="AUI Global Stylesheet"
                   language="ObjectiveC"
-                  implementationClass="com.github.aui.clion.fileType.AUIStylesheetFileType"
+                  implementationClass="com.github.aui.ideplugin.fileType.AUIStylesheetFileType"
                   extensions="ass.cpp"
                   fieldName="INSTANCE"/>
 
-        <fileTypeOverrider implementation="com.github.aui.clion.fileTypeOverrider.AUIStylesheetFileTypeOverrider" />
+        <fileTypeOverrider implementation="com.github.aui.ideplugin.fileTypeOverrider.AUIStylesheetFileTypeOverrider" />
     </extensions>
 
     <actions>
         <action id="AUI.NewWindowFile"
-                class="com.github.aui.clion.fileTemplates.AUIWindowTemplate">
+                class="com.github.aui.ideplugin.fileTemplates.AUIWindowTemplate">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
         </action>
         <action id="AUI.NewAUITestSuite"
-                class="com.github.aui.clion.fileTemplates.AUITestSuiteTemplate">
+                class="com.github.aui.ideplugin.fileTemplates.AUITestSuiteTemplate">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
         </action>
         <action id="AUI.NewAUIStylesheet"
-                class="com.github.aui.clion.fileTemplates.AUIStylesheet">
+                class="com.github.aui.ideplugin.fileTemplates.AUIStylesheet">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
         </action>
     </actions>
 
     <applicationListeners>
-        <listener class="com.github.aui.clion.listeners.MyProjectManagerListener"
+        <listener class="com.github.aui.ideplugin.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 
