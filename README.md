@@ -1,12 +1,8 @@
-# ide-plugin-clion
+# AUI Framework Support plugin for CLion
 
 ![Build](https://github.com/aui-framework/ide-plugin-clion/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/26118-aui-framework-support.svg)](https://plugins.jetbrains.com/plugin/26118-aui-framework-support)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/26118-aui-framework-support.svg)](https://plugins.jetbrains.com/plugin/26118-aui-framework-support)
-
-## Template ToDo list
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
 
 <!-- Plugin description -->
 AUI Framework Support plugin provides various QoL features for application development with
@@ -17,8 +13,6 @@ AUI Framework Support plugin provides various QoL features for application devel
 - assets gutter
 
 <!-- Plugin description end -->
-
-
 
 ## Installation
 
