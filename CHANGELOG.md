@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# aui-clion-plugin Changelog
+# ide-plugin-clion Changelog
 
 ## [Unreleased]
 ### Added
