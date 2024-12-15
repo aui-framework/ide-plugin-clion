@@ -1,4 +1,4 @@
-package com.github.aui.ideplugin
+package com.github.aui.ideplugin.icons
 
 import com.intellij.openapi.util.IconLoader
 

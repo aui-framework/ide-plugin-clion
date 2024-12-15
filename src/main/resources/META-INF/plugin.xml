@@ -9,7 +9,7 @@
     <depends>com.intellij.clion</depends>
     <depends>com.intellij.cidr.lang</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <resource-bundle>messages.AUIBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
         <projectService serviceImplementation="com.github.aui.ideplugin.services.AUIProjectService"/>
@@ -20,7 +20,7 @@
         <internalFileTemplate name="AUI Test Suite"/>
         <internalFileTemplate name="AUI Window CPP" />
         <internalFileTemplate name="AUI Window Header" />
-        <internalFileTemplate name="AUI Global Stylesheet" />
+
 
         <localInspection language="ObjectiveC"
                          displayName="Invalid color literal"
@@ -51,14 +51,6 @@
 <!--                    factoryClass="com.github.aui.ideplugin.toolWindow.AUIPreviewToolWindowFactory" />-->
         <additionalTextAttributes scheme="Default" file="com/github/aui/ideplugin/colors/AUIDefault.xml"/>
         <additionalTextAttributes scheme="Darcula" file="com/github/aui/ideplugin/colors/AUIDarcula.xml"/>
-
-        <fileType name="AUI Global Stylesheet"
-                  language="ObjectiveC"
-                  implementationClass="com.github.aui.ideplugin.fileType.AUIStylesheetFileType"
-                  extensions="ass.cpp"
-                  fieldName="INSTANCE"/>
-
-        <fileTypeOverrider implementation="com.github.aui.ideplugin.fileTypeOverrider.AUIStylesheetFileTypeOverrider" />
     </extensions>
 
     <actions>
@@ -70,14 +62,10 @@
                 class="com.github.aui.ideplugin.fileTemplates.AUITestSuiteTemplate">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
         </action>
-        <action id="AUI.NewAUIStylesheet"
-                class="com.github.aui.ideplugin.fileTemplates.AUIStylesheet">
-            <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
-        </action>
     </actions>
 
     <applicationListeners>
-        <listener class="com.github.aui.ideplugin.listeners.MyProjectManagerListener"
+        <listener class="com.github.aui.ideplugin.listeners.AUIProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 

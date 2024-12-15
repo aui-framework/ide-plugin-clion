@@ -1,6 +1,6 @@
 package com.github.aui.ideplugin.fileTemplates
 
-import com.github.aui.ideplugin.AUIIcons
+import com.github.aui.ideplugin.icons.AUIIcons
 import com.intellij.openapi.project.DumbAware
 import com.intellij.psi.PsiDirectory
 

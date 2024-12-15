@@ -5,7 +5,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
 import com.github.aui.ideplugin.services.AUIProjectService
 
-internal class MyProjectManagerListener : ProjectManagerListener {
+internal class AUIProjectManagerListener : ProjectManagerListener {
     companion object {
         fun determineIsAuiProject(project: Project): Boolean {
             val cmakeLists = project.baseDir?.findChild("CMakeLists.txt") ?: return false

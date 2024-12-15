@@ -3,7 +3,7 @@
 package com.github.aui.ideplugin.project
 
 import com.github.aui.ideplugin.ConfigurationData
-import com.github.aui.ideplugin.AUIIcons
+import com.github.aui.ideplugin.icons.AUIIcons
 import com.intellij.ide.impl.setTrusted
 import com.intellij.ide.util.PsiNavigationSupport
 import com.intellij.ide.util.projectWizard.AbstractNewProjectStep
