@@ -1,6 +1,6 @@
 package com.github.aui.ideplugin.fileTemplates
 
-import com.github.aui.ideplugin.AUIIcons
+import com.github.aui.ideplugin.icons.AUIIcons
 import com.github.aui.ideplugin.services.AUIProjectService
 import com.intellij.ide.actions.CreateFileFromTemplateAction
 import com.intellij.ide.actions.CreateFileFromTemplateDialog

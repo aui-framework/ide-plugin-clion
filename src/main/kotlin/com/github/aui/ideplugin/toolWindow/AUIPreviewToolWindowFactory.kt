@@ -10,7 +10,7 @@ import com.intellij.ui.content.ContentFactory
 class AUIPreviewToolWindowFactory: ToolWindowFactory, DumbAware {
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
         val myToolWindow = AUIPreviewToolWindow(toolWindow)
-        val contentFactory = ContentFactory.SERVICE.getInstance()
+        val contentFactory = ContentFactory.getInstance()
         val content = contentFactory.createContent(myToolWindow, "", false)
         toolWindow.contentManager.addContent(content)
     }

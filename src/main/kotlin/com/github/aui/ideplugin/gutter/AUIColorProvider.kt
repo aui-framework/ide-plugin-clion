@@ -1,5 +1,7 @@
 package com.github.aui.ideplugin.gutter
 
+import com.github.aui.ideplugin.services.AUIProjectService
+import com.intellij.openapi.components.serviceIfCreated
 import com.intellij.openapi.editor.ElementColorProvider
 import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.tree.LeafPsiElement
@@ -11,6 +13,10 @@ import java.awt.Color
 
 class AUIColorProvider: ElementColorProvider {
     override fun getColorFrom(element: PsiElement): Color? {
+        if (element.project.serviceIfCreated<AUIProjectService>() == null) {
+            return null
+        }
+
         // TODO this function should have triggered only for leaf PsiElement; however, it triggers for non-leaf elements
         // because setColorTo could not handle leaf element
 
