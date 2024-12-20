@@ -4,7 +4,6 @@ package com.github.aui.ideplugin.project
 
 import com.github.aui.ideplugin.ConfigurationData
 import com.github.aui.ideplugin.icons.AUIIcons
-import com.intellij.ide.impl.setTrusted
 import com.intellij.ide.util.PsiNavigationSupport
 import com.intellij.ide.util.projectWizard.AbstractNewProjectStep
 import com.intellij.ide.util.projectWizard.CustomStepProjectGenerator
@@ -13,13 +12,11 @@ import com.intellij.openapi.module.Module
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VfsUtilCore
 import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.openapi.vfs.findFile
 import com.intellij.openapi.wm.impl.welcomeScreen.AbstractActionWithPanel
 import com.intellij.platform.DirectoryProjectGenerator
 import com.intellij.platform.ProjectGeneratorPeer
 import com.jetbrains.cidr.cpp.cmake.projectWizard.generators.CLionProjectGenerator
 import com.jetbrains.cidr.cpp.cmake.workspace.CMakeWorkspace
-import com.jetbrains.cidr.cpp.cmake.workspace.runAfterCMakeInitialized
 import java.util.function.Consumer
 import javax.swing.Icon
 
