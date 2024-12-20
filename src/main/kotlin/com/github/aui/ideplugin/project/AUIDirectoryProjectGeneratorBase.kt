@@ -13,11 +13,13 @@ import com.intellij.openapi.module.Module
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VfsUtilCore
 import com.intellij.openapi.vfs.VirtualFile
+import com.intellij.openapi.vfs.findFile
 import com.intellij.openapi.wm.impl.welcomeScreen.AbstractActionWithPanel
 import com.intellij.platform.DirectoryProjectGenerator
 import com.intellij.platform.ProjectGeneratorPeer
 import com.jetbrains.cidr.cpp.cmake.projectWizard.generators.CLionProjectGenerator
 import com.jetbrains.cidr.cpp.cmake.workspace.CMakeWorkspace
+import com.jetbrains.cidr.cpp.cmake.workspace.runAfterCMakeInitialized
 import java.util.function.Consumer
 import javax.swing.Icon
 
@@ -147,15 +149,15 @@ AUI_ENTRY {
                 })
             }
         }
-        project.setTrusted(true)                                                                   // trust the project
-        var cmake = CMakeWorkspace.getInstance(project)
+        val cmake = CMakeWorkspace.getInstance(project)
 
         // write -DAUIB_AUI_AS=TRUE
         if (settings.panel.auiSubProject.isSelected) {
             cmake.settings.profiles = cmake.settings.profiles.map { it.withGenerationOptions("-DAUIB_AUI_AS=TRUE") }
         }
 
-        cmake.selectProjectDir(VfsUtilCore.virtualToIoFile(baseDir))                               // load CMake project
+        // load CMake project
+        cmake.linkCMakeProject(VfsUtilCore.virtualToIoFile(baseDir))
     }
 
     override fun createStep(
