@@ -154,7 +154,10 @@ AUI_ENTRY {
         }
 
         // load CMake project
-        cmake.linkCMakeProject(VfsUtilCore.virtualToIoFile(baseDir))
+        cmake.selectProjectDir(VfsUtilCore.virtualToIoFile(baseDir))
+
+        // load CMake project
+//        cmake.linkCMakeProject(VfsUtilCore.virtualToIoFile(baseDir))
     }
 
     override fun createStep(
