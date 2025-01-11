@@ -4,7 +4,6 @@ import com.intellij.codeInsight.hints.*
 import com.intellij.openapi.editor.Editor
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
-import com.intellij.refactoring.suggested.endOffset
 import com.jetbrains.cidr.lang.psi.OCBinaryExpression
 import com.jetbrains.cidr.lang.psi.OCCallExpression
 import com.jetbrains.cidr.lang.psi.OCLambdaExpression
@@ -56,8 +55,8 @@ class AUILetInlayProvider: InlayHintsProvider<AUILetInlayProvider.Settings> {
 
                                     val inlay =
                                         factory.roundWithBackground(factory.smallText("it: ${type.name}"))
-                                    val offset = rhs.body?.firstChild?.endOffset ?: return true
-                                    sink.addInlineElement(offset, false, inlay, false)
+                                    val offset = rhs.body?.firstChild?.textRange ?: return true
+                                    sink.addInlineElement(offset.endOffset, false, inlay, false)
                                 }
                             }
                         }

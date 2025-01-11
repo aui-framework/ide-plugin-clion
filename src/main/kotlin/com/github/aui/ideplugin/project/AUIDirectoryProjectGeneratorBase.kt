@@ -4,7 +4,6 @@ package com.github.aui.ideplugin.project
 
 import com.github.aui.ideplugin.ConfigurationData
 import com.github.aui.ideplugin.icons.AUIIcons
-import com.intellij.ide.impl.setTrusted
 import com.intellij.ide.util.PsiNavigationSupport
 import com.intellij.ide.util.projectWizard.AbstractNewProjectStep
 import com.intellij.ide.util.projectWizard.CustomStepProjectGenerator
@@ -147,15 +146,18 @@ AUI_ENTRY {
                 })
             }
         }
-        project.setTrusted(true)                                                                   // trust the project
-        var cmake = CMakeWorkspace.getInstance(project)
+        val cmake = CMakeWorkspace.getInstance(project)
 
         // write -DAUIB_AUI_AS=TRUE
         if (settings.panel.auiSubProject.isSelected) {
             cmake.settings.profiles = cmake.settings.profiles.map { it.withGenerationOptions("-DAUIB_AUI_AS=TRUE") }
         }
 
-        cmake.selectProjectDir(VfsUtilCore.virtualToIoFile(baseDir))                               // load CMake project
+        // load CMake project
+        cmake.selectProjectDir(VfsUtilCore.virtualToIoFile(baseDir))
+
+        // load CMake project
+//        cmake.linkCMakeProject(VfsUtilCore.virtualToIoFile(baseDir))
     }
 
     override fun createStep(
